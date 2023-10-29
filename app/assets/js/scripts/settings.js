@@ -286,9 +286,9 @@ function settingsNavItemListener(ele, fade = true){
     document.getElementById(selectedSettingsTab).onscroll = settingsTabScrollListener
 
     if(fade){
-        $(`#${prevTab}`).fadeOut(250, () => {
+        $(`#${prevTab}`).fadeOut(50, () => {
             $(`#${selectedSettingsTab}`).fadeIn({
-                duration: 250,
+                duration: 50,
                 start: () => {
                     settingsTabScrollListener({
                         target: document.getElementById(selectedSettingsTab)

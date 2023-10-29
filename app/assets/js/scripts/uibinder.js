@@ -38,7 +38,7 @@ let currentView
  * @param {*} onNextFade Optional. Callback function to execute when the next view
  * fades in.
  */
-function switchView(current, next, currentFadeTime = 500, nextFadeTime = 500, onCurrentFade = () => {}, onNextFade = () => {}){
+function switchView(current, next, currentFadeTime = 50, nextFadeTime = 50, onCurrentFade = () => {}, onNextFade = () => {}){
     currentView = next
     $(`${current}`).fadeOut(currentFadeTime, async () => {
         await onCurrentFade()
@@ -97,7 +97,7 @@ async function showMainUI(data){
         }
 
         setTimeout(() => {
-            $('#loadingContainer').fadeOut(500, () => {
+            $('#loadingContainer').fadeOut(100, () => {
                 $('#loadSpinnerImage').removeClass('rotating')
             })
         }, 250)

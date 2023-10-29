@@ -1054,7 +1054,7 @@ body, button {
     height: 100%;
     display: flex;
     background-color: rgba(0, 0, 0, 0.50);
-    transition: background-color 0.25s cubic-bezier(.02, .01, .47, 1);
+    /*transition: background-color 0.25s cubic-bezier(.02, .01, .47, 1);*/
 }
 
 /* Drop shadow displayed when content is scrolled out of view. */
@@ -1065,7 +1065,7 @@ body, button {
     height: 5px;
     position: absolute;
     opacity: 0;
-    transition: opacity 0.25s ease;
+    /*transition: opacity 0.25s ease;*/
 }
 #settingsContainer[scrolled]:before {
     opacity: 1;
@@ -1122,7 +1122,7 @@ body, button {
     color: grey;
     cursor: pointer;
     outline: none;
-    transition: 0.25s ease;
+    /*transition: 0.25s ease;*/
 }
 .settingsNavItem:hover,
 .settingsNavItem:focus {
@@ -1165,7 +1165,7 @@ body, button {
     color: white;
     cursor: pointer;
     outline: none;
-    transition: 0.25s ease;
+    /*transition: 0.25s ease;*/
 }
 #settingsNavDone:hover,
 #settingsNavDone:focus {
@@ -2449,14 +2449,14 @@ input:checked + .toggleSwitchSlider:before {
 #landingContainer {
     height: 100%;
     position: relative;
-    transition: background 2s ease;
+    /*transition: background 2s ease;*/
     overflow-y: hidden;
 }
 
 /* Upper content container. */
 #landingContainer > #upper {
     position: relative;
-    transition: top 2s ease;
+    /*transition: top 2s ease;*/
     top: 0px;
     height: 77%;
     display: flex;
@@ -2486,7 +2486,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 #landingContainer > #lower > #left {
     position: relative;
-    transition: top 2s ease;
+    /*transition: top 2s ease;*/
     top: 0px;
     height: 100%;
     width: 33%;
@@ -2502,7 +2502,7 @@ input:checked + .toggleSwitchSlider:before {
 }
 #landingContainer > #lower > #center {
     position: relative;
-    transition: top 2s ease;
+    /*transition: top 2s ease;*/
     top: 0px;
     height: 100%;
     width: 34%;
@@ -2512,12 +2512,12 @@ input:checked + .toggleSwitchSlider:before {
 #landingContainer > #lower > #center #content {
     position: relative;
     z-index: 500;
-    transition: top 2s ease;
+    /*transition: top 2s ease;*/
     top: 10px;
 }
 #landingContainer > #lower > #right {
     position: relative;
-    transition: top 2s ease;
+    /*transition: top 2s ease;*/
     top: 0px;
     height: 100%;
     width: 33%;
@@ -2536,7 +2536,7 @@ input:checked + .toggleSwitchSlider:before {
     top: 100%;
     height: 100%;
     width: 100%;
-    transition: top 2s ease;
+    transition: top 0.5s ease;
     display: flex;
     align-items: flex-end;
     justify-content: center;

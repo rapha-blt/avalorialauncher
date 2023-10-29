@@ -86,7 +86,7 @@ function toggleOverlay(toggleState, dismissable = false, content = 'overlayConte
             $('#overlayDismiss').hide()
         }
         $('#overlayContainer').fadeIn({
-            duration: 250,
+            duration: 0,
             start: () => {
                 if(getCurrentView() === VIEWS.settings){
                     document.getElementById('settingsContainer').style.backgroundColor = 'transparent'
@@ -98,7 +98,7 @@ function toggleOverlay(toggleState, dismissable = false, content = 'overlayConte
         // Make things tabbable.
         $('#main *').removeAttr('tabindex')
         $('#overlayContainer').fadeOut({
-            duration: 250,
+            duration: 0,
             start: () => {
                 if(getCurrentView() === VIEWS.settings){
                     document.getElementById('settingsContainer').style.backgroundColor = 'rgba(0, 0, 0, 0.50)'
