@@ -223,7 +223,7 @@ selectedButton = "Compte sélectionné &#10004;"
 [js.settings.authAccountLogout]
 lastAccountWarningTitle = "Attention<br> c'est votre dernier compte"
 lastAccountWarningMessage = "Pour utiliser le launcher vous devez être connecté à au moins un compte. Vous devrez vous reconnecter juste après.<br><br>Êtes-vous sûr de vouloir vous déconnecter?"
-confirmButton = "Je suis sûr"
+confirmButton = "Oui je suis sûr"
 cancelButton = "Annuler"
 
 [js.settings.authAccountPopulate]
