@@ -4,15 +4,15 @@
 title = "Avaloria Launcher"
 
 [ejs.landing]
-mediaGitHubURL = ""
+mediaGitHubURL = "https://github.com/rapha-blt/avalorialauncher"
 mediaTwitterURL = "#"
 mediaInstagramURL = "https://instagram.com/avaloriamc"
 mediaYouTubeURL = "#"
 mediaDiscordURL = "https://discord.gg/rxeC93ZQud"
 
 [ejs.settings]
-sourceGithubLink = "https://github.com/dscalZi/HeliosLauncher"
-supportLink = "https://github.com/dscalZi/HeliosLauncher/issues"
+sourceGithubLink = "https://github.com/rapha-blt/avalorialauncher"
+supportLink = "https://github.com/rapha-blt/avalorialauncher/issues"
 
 [ejs.welcome]
 welcomeHeader = "BIENVENUE SUR AVALORIA"
