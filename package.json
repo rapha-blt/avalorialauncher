@@ -5,9 +5,9 @@
   "description": "Launcher du serveur minecraft Avaloria",
   "author": "Raphaël Bluteau",
   "license": "UNLICENSED",
-  "homepage": "https://avaloria.com",
+  "homepage": "https://avaloria.fr",
   "bugs": {
-    "url": "https://avaloria.com/issues"
+    "url": "https://avaloria.fr/issues"
   },
   "private": true,
   "main": "index.js",
