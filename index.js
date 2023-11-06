@@ -2,7 +2,7 @@ const remoteMain = require('@electron/remote/main')
 remoteMain.initialize()
 
 // Requirements
-const { app, BrowserWindow, ipcMain, Menu, shell } = require('electron')
+const { app, BrowserWindow, ipcMain, Menu, shell, Notification } = require('electron')
 const autoUpdater                       = require('electron-updater').autoUpdater
 const ejse                              = require('ejs-electron')
 const fs                                = require('fs')
@@ -341,8 +341,18 @@ function getPlatformIcon(filename){
     return path.join(__dirname, 'app', 'assets', 'images', `${filename}.${ext}`)
 }
 
+const NOTIFICATION_TITLE = 'Mise à Jour Disponible'
+const NOTIFICATION_BODY = 'Une nouvelle mise à jour du launcher est disponible, installe-la !'
+
+function showNotification () {
+  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
+}
+
 app.on('ready', createWindow)
 app.on('ready', createMenu)
+app.on('ready', showNotification)
+
+
 
 app.on('window-all-closed', () => {
     // On macOS it is common for applications and their menu bar

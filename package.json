@@ -28,6 +28,7 @@
     "discord-rpc-patch": "^4.0.1",
     "ejs": "^3.1.9",
     "ejs-electron": "^2.1.1",
+    "electron-notification": "^1.0.0",
     "electron-updater": "^6.1.4",
     "fs-extra": "^11.1.1",
     "github-syntax-dark": "^0.5.0",

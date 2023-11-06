@@ -645,6 +645,7 @@ async function dlAsync(login = true) {
 // DOM Cache
 const newsContent                   = document.getElementById('newsContent')
 const newsArticleTitle              = document.getElementById('newsArticleTitle')
+const newsArticleDescription        = document.getElementById('newsArticleDescription')
 const newsArticleDate               = document.getElementById('newsArticleDate')
 const newsArticleAuthor             = document.getElementById('newsArticleAuthor')
 const newsArticleComments           = document.getElementById('newsArticleComments')
@@ -942,10 +943,11 @@ document.addEventListener('keydown', (e) => {
 function displayArticle(articleObject, index){
     newsArticleTitle.innerHTML = articleObject.title
     newsArticleTitle.href = articleObject.link
-    newsArticleAuthor.innerHTML = 'by ' + articleObject.author
+    newsArticleDescription.innerHTML = articleObject.description
+    /*newsArticleAuthor.innerHTML = 'by ' + articleObject.author
     newsArticleDate.innerHTML = articleObject.date
     newsArticleComments.innerHTML = articleObject.comments
-    newsArticleComments.href = articleObject.commentsLink
+    newsArticleComments.href = articleObject.commentsLink*/
     newsArticleContentScrollable.innerHTML = '<div id="newsArticleContentWrapper"><div class="newsArticleSpacerTop"></div>' + articleObject.content + '<div class="newsArticleSpacerBot"></div></div>'
     Array.from(newsArticleContentScrollable.getElementsByClassName('bbCodeSpoilerButton')).forEach(v => {
         v.onclick = () => {
@@ -1000,6 +1002,7 @@ async function loadNews(){
 
                     let link   = el.find('link').text()
                     let title  = el.find('title').text()
+                    let description = el.find('description').text()
                     let author = el.find('dc\\:creator').text()
 
                     // Generate article.
@@ -1007,11 +1010,12 @@ async function loadNews(){
                         {
                             link,
                             title,
-                            date,
-                            author,
+                            //date,
+                            //author,
+                            description,
                             content,
-                            comments,
-                            commentsLink: link + '#comments'
+                            //comments,
+                            //commentsLink: link + '#comments'
                         }
                     )
                 }
