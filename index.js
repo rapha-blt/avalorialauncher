@@ -3,6 +3,7 @@ remoteMain.initialize()
 
 // Requirements
 const { app, BrowserWindow, ipcMain, Menu, shell, Notification } = require('electron')
+
 const autoUpdater                       = require('electron-updater').autoUpdater
 const ejse                              = require('ejs-electron')
 const fs                                = require('fs')
@@ -341,16 +342,25 @@ function getPlatformIcon(filename){
     return path.join(__dirname, 'app', 'assets', 'images', `${filename}.${ext}`)
 }
 
-const NOTIFICATION_TITLE = 'Mise à Jour Disponible'
-const NOTIFICATION_BODY = 'Une nouvelle mise à jour du launcher est disponible, installe-la !'
 
-function showNotification () {
-  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
-}
+const WebSocket = require('ws');
+
+const ws = new WebSocket('wss://avaloria.fr/ws');
+
+ws.on('open', function open() {
+  console.log('Connected to the server');
+});
+
+ws.on('message', function incoming(data) {
+  const notification = new Notification({
+    title: 'Notification Title',
+    body: data
+  });
+  notification.show();
+});
 
 app.on('ready', createWindow)
 app.on('ready', createMenu)
-app.on('ready', showNotification)
 
 
 
